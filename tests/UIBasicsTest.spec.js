@@ -1,7 +1,7 @@
 const {test, expect} = require('@playwright/test');
 
 
-test.only('First PlayWright Test' , async ({browser, page})=>
+test.only('First PlayWright Login Test' , async ({browser, page})=>
 {
     //chrome - plugins - cookies 
    //  const context = await browser.newContext();
@@ -16,6 +16,11 @@ test.only('First PlayWright Test' , async ({browser, page})=>
    await page.locator("[name='password']").fill("Learning@830$3mK2");
    await page.locator("[name='terms']").click();
    await page.locator('#signInBtn').click();
+   
+   await expect(page).toHaveTitle("ProtoCommerce");
+   console.log(await page.title());
+
+   await page.pause(); 
 
    
 
@@ -32,8 +37,9 @@ test.only('Second Test' , async ({browser, page})=>
    console.log(await page.title());
    await expect(page).toHaveTitle("Google");
 
-   console.log("Hello All")
+   
 
 
 })
+
 );
