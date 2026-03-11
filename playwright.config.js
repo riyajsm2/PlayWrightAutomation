@@ -14,9 +14,9 @@ import { defineConfig, devices } from '@playwright/test';
  */
 const config = ({
   testDir: './tests',
-  timeout : 40*1000,
+  timeout : 40*1000, // for each test
   expect : {
-    timeout : 5000,
+    timeout :50*1000 //for each expect assertion
   },
   /* Run tests in files in parallel */
   //fullyParallel: true,
@@ -88,5 +88,5 @@ const config = ({
   // },
 });
 
-module.exports = config
+module.exports = config  // it's available across the project
 

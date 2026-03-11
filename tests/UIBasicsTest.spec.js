@@ -22,12 +22,17 @@ test.only('First PlayWright Login Test' , async ({browser, page})=>
 
    await page.pause(); 
 
+}
+);
+
+
    
 
 
-},
 
-test.only('Second Test' , async ({browser, page})=>
+
+    test('Second Test' , async ({browser, page})=>
+
 {
     //chrome - plugins - cookies 
    //  const context = await browser.newContext();
@@ -40,6 +45,5 @@ test.only('Second Test' , async ({browser, page})=>
    
 
 
-})
+});
 
-);
